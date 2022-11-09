@@ -20,7 +20,7 @@
     <externalProfileLoc></externalProfileLoc>
     <truststorePassword></truststorePassword>
     <agentUsername></agentUsername>
-    <appSpace>empOrgdetails-AppSpace</appSpace>
+    <appSpace>emp_organization_details-AppSpace</appSpace>
     <agentSSL>false</agentSSL>
     <backupLocation></backupLocation>
     <earUploadPath></earUploadPath>
@@ -34,10 +34,10 @@
     <domainDesc></domainDesc>
     <keystorePassword></keystorePassword>
     <bw.Home>\bw\6.8</bw.Home>
-    <httpPort>8873</httpPort>
-    <profile></profile>
+    <httpPort>8375</httpPort>
+    <profile>default.substvar</profile>
     <restartAppNode>false</restartAppNode>
-    <appNode>empOrgdetails-AppNode</appNode>
+    <appNode>emp_organization_details-AppNode</appNode>
     <failIfNoTests>false</failIfNoTests>
     <truststorePath></truststorePath>
     <keystorePath></keystorePath>
@@ -99,6 +99,9 @@
   <profiles>
     <profile>
       <id>DEFAULT</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <profile>default.substvar</profile>
       </properties>

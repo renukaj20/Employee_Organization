@@ -1506,11 +1506,7 @@
             name="_error_ParseJSON" sca-bpel:internal="true"/>
         <bpws:variable name="CorrelationId" type="xsd:string"/>
         <bpws:variable element="ns14:LogExceptionHandler"
-            name="start_log-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns14:LogExceptionHandler"
             name="start_log" sca-bpel:internal="true"/>
-        <bpws:variable element="ns14:LogExceptionHandler"
-            name="end_log-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns14:LogExceptionHandler" name="end_log" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:ResponseActivityInput"
             name="SendHTTPResponse-input" sca-bpel:internal="true"/>
@@ -1518,8 +1514,6 @@
             name="_error_SendHTTPResponse" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
-        <bpws:variable element="ns14:LogExceptionHandler"
-            name="common_logging-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns14:LogExceptionHandler"
             name="common_logging" sca-bpel:internal="true"/>
     </bpws:variables>
@@ -1539,9 +1533,7 @@
                     <bpws:flow name="flow1">
                         <bpws:links/>
                         <bpws:extensionActivity>
-                            <tibex:extActivity
-                                inputVariable="common_logging-input"
-                                name="common_logging"
+                            <tibex:extActivity name="common_logging"
                                 outputVariable="common_logging"
                                 tibex:xpdlId="d2ccc62f-2b6f-46f1-8e2b-8f6e70ac3d59"
                                 type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
@@ -1793,8 +1785,8 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity inputVariable="start_log-input"
-                    name="start_log" outputVariable="start_log"
+                <tibex:extActivity name="start_log"
+                    outputVariable="start_log"
                     tibex:xpdlId="5465562e-5656-430b-a81a-f20dad835283"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
@@ -1812,8 +1804,8 @@
                 </tibex:extActivity>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity inputVariable="end_log-input"
-                    name="end_log" outputVariable="end_log"
+                <tibex:extActivity name="end_log"
+                    outputVariable="end_log"
                     tibex:xpdlId="ad515bbb-348a-4599-8ed7-ee42f568e22e"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
